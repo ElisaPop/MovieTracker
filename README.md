@@ -36,7 +36,7 @@ You can save movies and keep them in a list by clicking the bookmark icon for la
 
 You can access your profile to change your password or personalize it by adding a picture.
 
-When changing your password, the old password is needed and the new password should not be the same and follow the password pattern.
+When changing your password, the old password is needed and the new password should follow the password pattern and not be the same as the old one.
 
 ![image](https://drive.google.com/uc?export=view&id=1E7BHKInPk5tP2mm04IUb7DxxPuURnPw5)
 
