@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_border"
+        android:padding="@dimen/small_padding"
+        android:paddingStart="@dimen/small_margin"
+        android:paddingEnd="@dimen/small_margin">
+
+        <ImageView
+            android:id="@+id/profile_picture_map"
+            android:layout_width="@dimen/map_window_profile_picture"
+            android:layout_height="@dimen/map_window_profile_picture"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_small_text_size"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/very_small_margin"
+            app:layout_constraintStart_toEndOf="@+id/profile_picture_map"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Placeholder" />
+
+        <TextView
+            android:id="@+id/date_viewed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginStart="@dimen/very_small_margin"
+            app:layout_constraintStart_toEndOf="@+id/profile_picture_map"
+            app:layout_constraintTop_toBottomOf="@+id/user_name"
+            tools:text="Placeholder" />
+
+        <ImageView
+            android:id="@+id/chat_button"
+            android:layout_width="@dimen/map_window_chat_icon"
+            android:layout_height="@dimen/map_window_chat_icon"
+            android:layout_marginTop="@dimen/very_small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:background="@drawable/ic_baseline_chat_user_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/date_viewed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginEnd="@dimen/big_margin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

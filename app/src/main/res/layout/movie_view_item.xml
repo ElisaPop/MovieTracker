@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.example.movietracker.main.entity.MovieItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_height_width"
+        android:padding="@dimen/small_padding">
+
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="@dimen/poster_image_width"
+            android:layout_height="@dimen/poster_image_height"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/small_padding"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{`w500` + movie.poster_path}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="@dimen/movie_view_title"
+            android:layout_height="wrap_content"
+            android:text="@{movie.title}"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/movie_rating"
+            app:layout_constraintStart_toEndOf="@+id/movie_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/bookmark_button"
+            android:layout_width="@dimen/button_icon_size"
+            android:layout_height="@dimen/button_icon_size"
+            android:layout_marginTop="@dimen/very_small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:background="@drawable/ic_baseline_bookmark_border_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginEnd="@dimen/big_margin" />
+
+        <TextView
+            android:id="@+id/movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Double.toString(movie.vote_average)}"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/movie_date"
+            app:layout_constraintStart_toEndOf="@+id/movie_image"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+        <ImageView
+            android:layout_width="@dimen/normal_text_size"
+            android:layout_height="@dimen/normal_text_size"
+            android:src="@drawable/ic_baseline_star_24"
+            app:layout_constraintBottom_toTopOf="@+id/movie_date"
+            app:layout_constraintStart_toEndOf="@+id/movie_rating"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+        <TextView
+            android:id="@+id/movie_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{movie.release_date}"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movie_image"
+            app:layout_constraintTop_toBottomOf="@+id/movie_rating" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.movietracker.main.fragments.movieViewers.MovieViewersViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MovieDetailsFragment">
+
+        <ImageView
+            android:id="@+id/backdrop_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/backdrop_image_height"
+            android:scaleType="fitXY"
+            app:imageUrl="@{`original` + viewModel.selectedMovie.backdrop_path}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="@dimen/title_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:text="@{viewModel.selectedMovie.title}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/backdrop_image"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Placeholder" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewers_list"
+            android:layout_width="@dimen/full_dimension"
+            android:layout_height="@dimen/full_dimension"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backdrop_image"
+            app:userListData="@{viewModel.userItemList}"
+            tools:listitem="@layout/user_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

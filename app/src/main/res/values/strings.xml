@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">MovieTracker</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_current_password">Your current password is incorrect.</string>
+    <string name="invalid_password">Password must have at least 6 characters, a number, a lowercase letter, an uppercase letter and a special character.</string>
+    <string name="password_changed_success">Password changed successfully</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login_btn">Log in</string>
+    <string name="logout_btn">Log out</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="log_in">Log In</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register_here"><u>REGISTER HERE</u></string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in_here"><u>LOG IN HERE</u></string>
+    <string name="register">Register</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="passwords_not_matching">The passwords do not match</string>
+    <string name="login_success">Logged in successfully.</string>
+    <string name="register_success">Registered successfully.</string>
+    <string name="google_sign_in_failed">Google sign in failed</string>
+    <string name="same_email_different_authentication">The same email was used for a different authentication method.</string>
+    <string name="authentication_failed">Authentication failed.</string>
+    <string name="who_also_viewed_this_movie">See who also viewed this movie</string>
+
+    <string name="menu_movies">Movies</string>
+    <string name="menu_top">Top Rated</string>
+    <string name="menu_bookmark">Saved</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_chat">Chat</string>
+
+    <string name="rating_ceiling">/10</string>
+    <string name="votes_text"> votes</string>
+    <string name="overview_text">Overview</string>
+    <string name="search">Search</string>
+
+    <string name="query_hint">Enter search text here</string>
+
+    <string name="share_movie_text"><b>%1$s</b>: %2$s</string>
+    <string name="share">Share</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="invalid_name">Name field is empty</string>
+
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="location">Location:</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_image">Change Image</string>
+    <string name="login_restriction_text">You have to be logged in in order to use this functionality.</string>
+    <string name="no_movies_bookmarked">You have no movies bookmarked.</string>
+    <string name="movies">Movies</string>
+    <string name="top_rated_movies">Top Rated Movies</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="log_out">Log Out</string>
+
+
+    <string name="upload_photo">Upload Photo</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="failed_upload">Failed to upload image</string>
+    <string name="location_unavailable">Location unavailable</string>
+    <string name="success_upload">Upload successful</string>
+
+    <string name="activity_fail">Failed operation</string>
+    <string name="activity_unknown">Unknown operation</string>
+    <string name="open_gallery_fail">Unable to open gallery</string>
+    <string name="open_camera_fail">Upload unsuccessful</string>
+    <string name="current_password">Current Password</string>
+    <string name="verify_new_password">Verify new password</string>
+    <string name="new_password">New password</string>
+    <string name="menu_map">Map</string>
+    <string name="menu_list">List</string>
+    <string name="set_location">Set location</string>
+    <string name="your_set_location">Your set location</string>
+    <string name="get_location">Get location</string>
+    <string name="user_location">User location</string>
+    <string name="could_not_fetch_address">Could not fetch address</string>
+    <string name="current_location_set">Your location has been changed to the current location.</string>
+    <string name="error_map_service">An error occurred and you may have to manually activate the location and try again.</string>
+    <string name="error_location_set">An error has occurred and the current location could not be changed.</string>
+    <string name="send_button_label">Send</string>
+    <string name="message_sent_by_user"> You: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/moviesFragment"
+        android:icon="@drawable/ic_baseline_movie_24"
+        android:title="@string/menu_movies" />
+
+    <item
+        android:id="@+id/topRatedFragment"
+        android:icon="@drawable/ic_baseline_star_24"
+        android:title="@string/menu_top" />
+
+    <item
+        android:id="@+id/bookmarkFragment"
+        android:icon="@drawable/ic_baseline_bookmark_24"
+        android:title="@string/menu_bookmark" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/menu_profile" />
+
+</menu>

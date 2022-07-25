@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.movietracker.main.MainFragment"
+        android:label="MainFragment" />
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.example.movietracker.main.fragments.movie.MoviesFragment"
+        android:label="@string/movies"
+        tools:layout="@layout/movies_fragment">
+        <action
+            android:id="@+id/action_show_detail"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topRatedFragment"
+        android:name="com.example.movietracker.main.fragments.top.TopRatedFragment"
+        android:label="@string/top_rated_movies">
+        <action
+            android:id="@+id/action_top_show_detail"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.movietracker.main.fragments.bookmark.BookmarkFragment"
+        android:label="Bookmarks"
+        tools:layout="@layout/bookmark_fragment">
+        <action
+            android:id="@+id/action_bookmarkFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.movietracker.main.fragments.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/profile_fragment">
+        <action
+            android:id="@+id/action_profileFragment_to_changeImageFragment"
+            app:destination="@id/changeImageFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_conversationFragment"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.movietracker.main.fragments.movieDetails.MovieDetailsFragment"
+        android:label="@string/movie_details"
+        tools:layout="@layout/movie_details_fragment">
+        <argument
+            android:name="selectedMovie"
+            app:argType="com.example.movietracker.main.entity.MovieItem" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_movieViewersFragment"
+            app:destination="@id/movieViewersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeImageFragment"
+        android:name="com.example.movietracker.main.fragments.profile.auxiliary.ChangeImageFragment"
+        android:label="ChangeImageFragment">
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_changeImageFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.movietracker.main.fragments.profile.auxiliary.ChangePasswordFragment"
+        android:label="ChangePasswordFragment" />
+    <fragment
+        android:id="@+id/movieViewersFragment"
+        android:name="com.example.movietracker.main.fragments.movieViewers.MovieViewersFragment"
+        android:label="Movie Viewers"
+        tools:layout="@layout/movie_viewers_fragment">
+        <argument
+            android:name="movie"
+            app:argType="com.example.movietracker.main.entity.MovieItem" />
+        <action
+            android:id="@+id/action_movieViewersFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_movieViewersFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.movietracker.main.fragments.movieViewers.map.MapsFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/action_mapsFragment_to_movieViewersFragment"
+            app:destination="@id/movieViewersFragment" />
+        <argument
+            android:name="movie"
+            app:argType="com.example.movietracker.main.entity.MovieItem" />
+            <action
+            android:id="@+id/action_mapsFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.movietracker.main.fragments.chat.ChatFragment"
+        android:label=""
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="targetId"
+            app:argType="string" />
+        <argument
+            android:name="currentId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_chatFragment_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.example.movietracker.main.fragments.conversation.ConversationFragment"
+        android:label="Conversations"
+        tools:layout="@layout/conversation_fragment">
+        <action
+            android:id="@+id/action_conversationFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fullImageFragment"
+        android:name="com.example.movietracker.main.fragments.chat.FullImageFragment"
+        android:label="Image"
+        tools:layout="@layout/fragment_full_image">
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+    </fragment>
+</navigation>

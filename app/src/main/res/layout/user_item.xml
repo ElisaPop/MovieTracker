@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="userItemData"
+            type="com.example.movietracker.main.entity.UserItemData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/user_item_height"
+        android:padding="@dimen/small_padding">
+
+        <ImageView
+            android:id="@+id/profile_picture_list"
+            android:layout_width="@dimen/list_profile_picture"
+            android:layout_height="@dimen/list_profile_picture"
+            app:firebaseStorageImageUrl="@{userItemData.pathReference}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="@dimen/movie_view_title"
+            android:layout_height="wrap_content"
+            android:text="@{userItemData.name}"
+            android:textSize="@dimen/medium_text_size"
+            android:layout_marginStart="@dimen/small_margin"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/profile_picture_list"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/movie_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Viewed this on ` + userItemData.bookmarkDate}"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_marginStart="@dimen/small_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_picture_list"
+            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+        <ImageButton
+            android:id="@+id/chat_button"
+            android:layout_width="@dimen/button_icon_size"
+            android:layout_height="@dimen/button_icon_size"
+            android:layout_marginTop="@dimen/very_small_margin"
+            android:layout_marginStart="@dimen/very_small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:background="@drawable/ic_baseline_chat_user_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/movie_date" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

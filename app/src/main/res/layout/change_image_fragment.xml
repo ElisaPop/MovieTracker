@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/layout_margin"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/image_height_width"
+            android:layout_height="@dimen/image_height_width"
+            android:adjustViewBounds="true"
+            android:background="@drawable/image_border"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/take_photo_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/take_photo_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/blue_200"
+            android:text="@string/take_photo"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/upload_photo_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/upload_photo_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/blue_200"
+            android:text="@string/upload_photo"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/take_photo_button" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            android:layout_width="@dimen/half_button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginEnd="@dimen/half_button_margin"
+            android:background="@color/blue_700"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ok_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upload_photo_button" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ok_button"
+            android:layout_width="@dimen/half_button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/half_button_margin"
+            android:background="@color/blue_200"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@id/upload_photo_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
